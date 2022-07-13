@@ -1,0 +1,26 @@
+﻿@model Store.BL.ViewModels.CommentVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<center>
+    <h1>Create Comment</h1>
+</center>
+
+<div>
+    <form class="form-control" asp-controller="Comment" asp-action="Create" >
+
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" name="Name" asp-for="Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <br />
+        <label for="UserComment">UserComment</label>
+        <input type="text" class="form-control" asp-for="UserComment" name="UserComment">
+        <span asp-validation-for="UserComment" class="text-danger"></span>
+        <br />
+
+        <input type="submit" value="Save" class="btn btn-outline-cyan" />
+    </form>
+    <br />
+</div>

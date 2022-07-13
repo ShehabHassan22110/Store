@@ -1,0 +1,45 @@
+﻿@model Store.BL.ViewModels.ProductVM
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<center>
+    <h1>Delete Product</h1>
+
+</center>
+
+<div class="card">
+    <form class="form-control" asp-controller="Product" asp-action="Delete" method="post">
+
+        <img src="~/Files/Imgs/@Model.PhotoName" class=" mt-2 rounded mx-auto d-block shadow-lg " style="height:200px ; width:300px" alt="...">
+        <br />
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+        <br />
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" asp-for="Description">
+        <br />
+
+        <label for="Brand">Brand</label>
+        <input type="text" class="form-control" asp-for="Brand">
+        <br />
+        <label for="ModelYear">Model Year</label>
+        <input type="text" class="form-control" asp-for="ModelYear">
+        <br />
+        <label for="Salary">Salary</label>
+        <input type="text" class="form-control" asp-for="Salary">
+        <br />
+        <label for="Quantity">Quantity</label>
+        <input type="text" class="form-control" asp-for="Quantity">
+        <br />
+        <label for="Vat">Vat</label>
+        <input type="text" class="form-control" asp-for="Vat">
+        <br />
+
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <input type="submit" value="Back to data" asp-controller="Product" asp-action="Index" class="btn btn-outline-danger" />
+
+    </form>
+</div>
+

@@ -1,0 +1,171 @@
+﻿@model Store.BL.ViewModels.ProductVM 
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Matrix Template - The Ultimate Multipurpose admin template</title>
+    <!-- Custom CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+   
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-body printableArea">
+                            <h3><b>INVOICE</b> <span class="pull-right">#@Model.Id</span></h3>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="pull-left">
+                                        <div>
+                                            <h3> &nbsp;<b class="text-danger">@Model.Name</b></h3>
+                                            <p class="text-muted m-l-5">
+                                                <br /> @Model.Brand,
+                                                <br /> @Model.Salary $,
+                                                <br />
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="">
+                                        <img class="m-auto " style="height:420px;width:400px ; border-radius:15px 10px ; border:dashed; border-color:crimson ;   " src="~/Files/Imgs/@Model.PhotoName" alt="user" />
+                                    </div>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <div style="margin-top:100%" class="pull-right text-right ">
+                                        <div>
+                                            <h3>More Details,</h3>
+                                            <h4 class="font-bold">content & Description,</h4>
+                                            <p class="text-muted m-l-30">
+                                                @Model.Description
+                                                <br /> @Model.Brand,
+                                                <br /> @Model.Salary,
+                                                <br /> @Model.Offer
+                                            </p>
+                                            <p class="m-t-30"><b>Model Year : @Model.ModelYear</b> <i class="fa fa-calendar"></i> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="table-responsive m-t-40" style="clear: both;">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">#</th>
+                                                    <th>Name</th>
+                                                    <th class="text-right">Quantity</th>
+                                                    <th class="text-right">Unit Cost</th>
+                                                    <th class="text-right">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">@Model.Id</td>
+                                                    <td>@Model.Name</td>
+                                                    <td class="text-right">@Model.Quantity </td>
+                                                    <td class="text-right"> $ @Model.Salary </td>
+                                                    <td class="text-right"> $ @Model.Cost </td>
+                                                </tr>
+                                            </tbody>
+                              
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="pull-right m-t-30 text-right">
+                                        <p>Sub - Total amount: $@Model.Cost</p>
+                                        <p>vat ( %) : $@Model.Vat </p>
+                                        <hr>
+                                        <h3><b>Total :</b> $@Model.Total</h3>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <hr>
+                                    <div class="text-right">
+                                        <button class="btn btn-danger" type="submit"> Proceed to payment </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center">
+                All Rights Reserved ,and Developed by <a href="https://www.linkedin.com/in/shehab-hassan-5a426b211/">SheHab Hassan</a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+</body>
+
+</html>

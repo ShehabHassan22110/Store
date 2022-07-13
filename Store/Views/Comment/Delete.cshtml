@@ -1,0 +1,30 @@
+﻿@model Store.BL.ViewModels.CommentVM
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<center>
+    <h1>Delete Comment</h1>
+</center>
+
+<div class="card">
+    <form class="form-control" asp-controller="Comment" asp-action="Edit" method="post">
+
+
+
+        <label asp-for="Name">Name</label>
+        <input type="text" class="form-control" asp-for="Name" disabled>
+
+        <br />
+        <label asp-for="UserComment">User Comment</label>
+        <input type="text" class="form-control" asp-for="UserComment" disabled>
+
+        <br />
+
+        <a asp-controller="Comment" asp-action="Index" class="btn btn-primary">Back To Data</a>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <input type="reset" value="Cancel" class="btn btn-warning" />
+
+    </form>
+</div>

@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap-select@1.13.18",
+      "destination": "wwwroot/bootstrap-select/"
+    },
+    {
+      "library": "datatable@2.0.2",
+      "destination": "wwwroot/datatable/"
+    },
+    {
+      "library": "datatables@1.10.21",
+      "destination": "wwwroot/datatables/"
+    },
+    {
+      "library": "bootstrap@5.1.3",
+      "destination": "wwwroot/bootstrap/",
+      "files": [
+        "js/bootstrap.js"
+      ]
+    }
+  ]
+}

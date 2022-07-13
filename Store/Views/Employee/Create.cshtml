@@ -1,0 +1,41 @@
+﻿@model Store.BL.ViewModels.EmployeeVM 
+@{
+    ViewData["Title"] = "Create";
+}
+
+<center>
+    <h1>Create</h1>
+
+</center>
+   
+<div>
+    <form class="form-control" asp-controller="Employee" asp-action="Create" enctype="multipart/form-data" >
+
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" name="Name" asp-for="Name">
+        @*<span asp-validation-for="Name" class="text-danger"></span>*@
+        <br />
+        <label for="Code">Code</label>
+        <input type="text" class="form-control" asp-for="Code" name="Code">
+        @*<span asp-validation-for="Code" class="text-danger"></span>*@
+        <br />
+
+        <label for="Phone">Phone</label>
+        <input type="text" class="form-control" asp-for="Phone" name="Phone">
+        <span asp-validation-for="Phone" class="text-danger"></span>
+        <br />
+
+        <label for="Cv">CV</label>
+        <input type="file" class="form-control" asp-for="Cv">
+        <br />
+
+        <label for="Photo">Image</label>
+        <input type="file" class="form-control" asp-for="Photo">
+        <br />
+
+
+        <input type="submit" value="Save" class="btn btn-outline-cyan" />
+    </form>
+</div>
+
+

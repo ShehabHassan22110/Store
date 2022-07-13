@@ -1,0 +1,59 @@
+﻿@model Store.BL.ViewModels.ProductVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<center>
+    <h1>Create</h1>
+
+</center>
+<div>
+    <form class="form-control" asp-controller="Product" asp-action="Create" enctype="multipart/form-data">
+
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <br />
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" asp-for="Description">
+        <span asp-validation-for="Description" class="text-danger"></span>
+        <br />
+
+        <label for="Brand">Brand</label>
+        <input type="text" class="form-control" asp-for="Brand">
+        <span asp-validation-for="Brand" class="text-danger"></span>
+        <br />
+        <label for="ModelYear">Model Year</label>
+        <input type="text" class="form-control" asp-for="ModelYear">
+        <span asp-validation-for="ModelYear" class="text-danger"></span>
+        <br />
+        <label for="Salary">Salary</label>
+        <input type="text" class="form-control" asp-for="Salary">
+        <span asp-validation-for="Salary" class="text-danger"></span>
+        <br />
+        <label for="Quantity">Quantity</label>
+        <input type="text" class="form-control" asp-for="Quantity">
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+        <br />
+        <label for="Vat">Vat</label>
+        <input type="text" class="form-control" asp-for="Vat">
+        <span asp-validation-for="Vat" class="text-danger"></span>
+        <br />
+        <label for="Photo">Image</label>
+        <input type="file" class="form-control" asp-for="Photo">
+        <br />
+
+
+        @*<label for="Cv">CV</label>
+        <input type="file" class="form-control" asp-for="Cv">
+        <br />
+
+        <label for="Photo">Image</label>
+        <input type="file" class="form-control" asp-for="Photo">
+        <br />*@
+
+
+        <input type="submit" value="Save" class="btn btn-outline-cyan" />
+    </form>
+</div>

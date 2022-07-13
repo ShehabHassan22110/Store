@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Store.BL.ViewModels.CommentVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title m-b-0">All Comments</h4>
+            </div>
+            <div class="comment-widgets scrollable">
+                <!-- Comment Row -->
+                @foreach (var item in Model)
+                {
+                    <div style="height:2px;width:100%;background-color:lightgray">
+
+                    </div>
+                    <div class="d-flex flex-row comment-row m-t-0">
+                        <div class="p-2"><img src="~/assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle"></div>
+                        <div class="comment-text w-100">
+                            <h6 class="font-medium">From : @item.Name</h6>
+                            <span class="m-b-15 d-block">"@item.UserComment"</span>
+                            <div class="comment-footer">
+                                <span class="text-muted float-right">2022</span>
+                                <a type="submit" class=" btn btn-success btn-sm" asp-controller="Comment"asp-route-id="@item.Id" asp-action="Edit">Edit</a>
+                                <a type="submit" class="btn btn-danger btn-sm" asp-controller="Comment"asp-route-id="@item.Id" asp-action="Delete">Delete</a>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+            
+            </div>
+        </div>
+    </div>
+</div>  <!-- accoridan part -->

@@ -1,0 +1,39 @@
+﻿@model Store.BL.ViewModels.EmployeeVM
+
+@{
+    ViewData["Title"] = "Details";
+}
+<center>
+    <h1>Details</h1>
+</center>
+
+
+<div class="card">
+    <div class="card-body">
+
+        <img src="~/Files/Imgs/@Model.PhotoName" class="rounded mx-auto d-block shadow-lg " style="height:200px ; width:300px" alt="...">
+        <br />
+
+        <label asp-for="Name">Id</label>
+        <input type="text" class="form-control" asp-for="Id" disabled>
+        <br />
+        <label asp-for="Name">Name</label>
+        <input type="text" class="form-control" asp-for="Name" disabled>
+        <br />
+        <label asp-for="Code">Code</label>
+        <input type="text" class="form-control" asp-for="Code" disabled>
+        <br />
+
+        <label asp-for="Phone">Phone</label>
+        <input type="text" class="form-control" asp-for="Phone" disabled>
+        <br />
+    </div>
+    <div class="border-top">
+        <div class="card-body">
+            <a asp-controller="Employee" asp-action="Index"   type="submit" class="btn btn-primary">Back To Data</a>
+            <a asp-controller="Employee" asp-action="Edit"   asp-route-id="@Model.Id" type="submit" class="btn btn-info">Edit</a>
+            <a asp-controller="Employee" asp-action="Delete" asp-route-id="@Model.Id" type="submit" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+</div>
+
